@@ -1,5 +1,38 @@
-.m3-btn
-{
+:root{
+    --color-base-1: #ffffff;
+    --color-base-2: #e9e9e9;
+    --color-base-3: #c1c1c1;
+    --color-base-4: #888888;
+    --color-base-5: #666666;
+    --color-base-6: #595959;
+    --color-base-7: #484848;
+    --color-base-8: #292929;
+    --color-base-9: #000000;
+    --color-main-1: #d48700;
+    --color-main-2: #944813;
+    --color-main-3: #5e2808;
+    --color-accent-1: #334DCF;
+
+    --icon-size-1: 20px;
+    --icon-size-2: 24px;
+    --icon-size-3: 32px;
+    --icon-size-4: 40px;
+}
+
+.m3-btn {
+	 /* ----------상수변수-------------- */
+    /* 버튼의 높이 : 32px, 40px, 56px, 96px, 136px; */
+    /* 버튼의 패딩 : (0 12px), (0 16px), (0 24px), (0 48px), (0 64px); */
+
+	
+	/* --------------변수---------------- */
+    --btn-color: var(--color-main-2);
+    --btn-size: var(--icon-size-1);
+    --btn-weight: 500;
+    --btn-height: 40px;
+    --btn-padding: 0 16px;
+    --btn-fill: 1;
+
 
 
 }
@@ -8,11 +41,77 @@
 
 @media (prefers-color-scheme: dark) {
 	.m3-btn {
-		
-	
+		--btn-color: var(--color-main-1);
+        --btn-outline-color: var(--color-main-2);
 	}
 }
 
 .m3-btn {
+	  /* boxing*/
+	  height: 40px;
+	  padding: 0 16px;
+	  border-radius: 40px;  
+	  border: 0px;
+	  background-color: var(--btn-color);
+	  /* content */
+	  font-size: var(--icon-size-1);
+	  font-weight: 400;
+	  color:var(--color-base-1);
+	  font-variation-settings: 'FILL' 1;
+  
+	  /* effect */
+	  transition: background-color 3s ease, 
+	  /* padding 3s ease, */
+	  transform 3s ease;
+  }
+  
+  /* 상태 별 속성 */
+  
+  .n-btn:disabled{
+	  background-color: color-mix(in srgb, var(--color-main-2), transparent 90%);
+	  color: rgba(29, 27, 32, 0.38);
+  }
+  
+  .n-btn:hover{
+	  background-color: color-mix(in srgb, var(--color-main-2), transparent 8%);
+  
+  }
+  
+  .n-btn:focus{
+	  /* background-color: rgba(148, 73, 19, 0.9); */
+	  background-color: color-mix(in srgb, var(--color-main-2), transparent 10%);
+	  outline-offset: 3px;
+	  outline: 3px solid var(--btn-color);
+  
+  }
+  
+  .n-btn:active{
+	  background-color: color-mix(in srgb, var(--color-main-2), transparent 8%);
+	  border-radius: 8px;
+  }
+  
+  /* class 별 속성 */
+  .btn-state\:disabled{
+	  background-color: color-mix(in srgb, var(--color-main-2), transparent 90%);
+	  color: rgba(29, 27, 32, 0.38);
+  }
+  
+  .btn-state\:hover{
+	  background-color: color-mix(in srgb, var(--color-main-2), transparent 8%);
+  
+  }
+  
+  .btn-state\:focus{
+	  /* background-color: rgba(148, 73, 19, 0.9); */
+	  background-color: color-mix(in srgb, var(--color-main-2), transparent 10%);
+	  outline-offset: 3px;
+	  outline: 3px solid var(--btn-color);
+  
+  }
+  
+  .btn-state\:active{
+	  background-color: color-mix(in srgb, var(--color-main-2), transparent 8%);
+	  border-radius: 8px;
+  }
+  
 	
-}
