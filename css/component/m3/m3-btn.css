@@ -67,17 +67,17 @@
   
   /* 상태 별 속성 */
   
-  .n-btn:disabled{
+  .m3-btn:disabled{
 	  background-color: color-mix(in srgb, var(--color-main-2), transparent 90%);
 	  color: rgba(29, 27, 32, 0.38);
   }
   
-  .n-btn:hover{
+  .m3-btn:hover{
 	  background-color: color-mix(in srgb, var(--color-main-2), transparent 8%);
   
   }
   
-  .n-btn:focus{
+  .m3-btn:focus{
 	  /* background-color: rgba(148, 73, 19, 0.9); */
 	  background-color: color-mix(in srgb, var(--color-main-2), transparent 10%);
 	  outline-offset: 3px;
@@ -85,7 +85,7 @@
   
   }
   
-  .n-btn:active{
+  .m3-btn:active{
 	  background-color: color-mix(in srgb, var(--color-main-2), transparent 8%);
 	  border-radius: 8px;
   }
